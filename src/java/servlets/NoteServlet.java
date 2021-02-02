@@ -17,8 +17,14 @@ public class NoteServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException 
     {
-        request.setAttribute("titleMessage", "This is the title");
-        request.setAttribute("contentsMessage", "Contents go here");
+        
+        String titleMessage = "This is the title";
+        String contentsMessage = "Contents go here";
+        
+        Note note = new Note(titleMessage, contentsMessage);
+        
+        request.setAttribute("titleMessage", note.getTitle());
+        request.setAttribute("contentsMessage", note.getContents());
         
         String status = request.getParameter("edit");
         boolean isEdit = status != null;

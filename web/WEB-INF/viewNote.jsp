@@ -12,7 +12,7 @@
         <title>Simple Note Keeper</title>
     </head>
     <body>
-        <form method="post" action="edit">
+        <form method="get" action="">
             <h1>Simple Note Keeper</h1>
             <h2>View Note</h2>
             <p><b>Title: </b> ${titleMessage}</p>

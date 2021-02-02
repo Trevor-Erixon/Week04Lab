@@ -12,9 +12,9 @@
         <title>Simple Note Keeper Edit</title>
     </head>
     <body>
-        <form method="post" action="/note?edit">
+        <form method="post" action="">
             <h1>Simple Note Keeper</h1>
-            <h2>View Note</h2>
+            <h2>Edit Note</h2>
             <p><b>Title: </b><input type="text" value=${titleMessage}></p>
             <p><b>Contents: </b><textarea rows="4" cols="20">${contentsMessage}</textarea></p>
             <input type="submit" value="Save">

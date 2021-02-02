@@ -1,7 +1,6 @@
 package servlets;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -17,7 +16,21 @@ public class NoteServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException 
     {
+        request.setAttribute("titleMessage", "This is the title");
+        request.setAttribute("contentsMessage", "Contents go here");
         
+        String status = request.getParameter("edit");
+        boolean isEdit = status != null;
+        
+        if (!isEdit)
+        {
+            getServletContext().getRequestDispatcher("/WEB-INF/viewNote.jsp")
+                .forward(request, response);
+            return;
+        }
+               
+        getServletContext().getRequestDispatcher("/WEB-INF/editNote.jsp")
+                .forward(request, response);
     }
 
     @Override

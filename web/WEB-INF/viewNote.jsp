@@ -12,12 +12,13 @@
         <title>Simple Note Keeper</title>
     </head>
     <body>
-        <form>
-            <h1>Simple Note Keeper</h1><br>
-            <h2>View Note</h2><br>
-            <h3>Title: </h3><br>
-            <h3>Contents: </h3><br>
-            <p><a href="">Edit</a>
+        <form method="post" action="edit">
+            <h1>Simple Note Keeper</h1>
+            <h2>View Note</h2>
+            <p><b>Title: </b> ${titleMessage}</p>
+            <p><b>Contents: </b></p>
+            <p>${contentsMessage}</p>
+            <p><a href="note?edit">Edit</a>
         </form>
     </body>
 </html>

@@ -12,11 +12,12 @@
         <title>Simple Note Keeper Edit</title>
     </head>
     <body>
-        <form>
-            <h1>Simple Note Keeper</h1><br>
-            <h2>View Note</h2><input type="text"><br>
-            <h3>Title: </h3><input type="text" ><br>
-            <h3>Contents: </h3><br>
+        <form method="post" action="/note?edit">
+            <h1>Simple Note Keeper</h1>
+            <h2>View Note</h2>
+            <p><b>Title: </b><input type="text" value=${titleMessage}></p>
+            <p><b>Contents: </b><textarea rows="4" cols="20">${contentsMessage}</textarea></p>
+            <input type="submit" value="Save">
         </form>
     </body>
 </html>

@@ -12,12 +12,12 @@
         <title>Simple Note Keeper</title>
     </head>
     <body>
-        <form method="get" action="">
+        <form>
             <h1>Simple Note Keeper</h1>
             <h2>View Note</h2>
-            <p><b>Title: </b> ${titleMessage}</p>
+            <p><b>Title: </b> ${note.title}</p>
             <p><b>Contents: </b></p>
-            <p>${contentsMessage}</p>
+            <p>${note.contents}</p>
             <p><a href="note?edit">Edit</a>
         </form>
     </body>
